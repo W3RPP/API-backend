@@ -4,4 +4,8 @@ const app = express();
 
 app.set('port', process.env.PORT || 3333);
 
-module.exports = app;   
+module.exports = app; 
+
+const router = require('./routes/rotas');
+
+app.use('/api', router);
